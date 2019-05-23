@@ -1,0 +1,23 @@
+#country {
+    max-width: 945px;
+    margin: 0 auto;
+}
+
+.country-list {
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    &:not(:first-of-type) {
+        border-top: 1px solid gray;
+    }
+    &:not(:last-of-type) {
+        border-bottom: 1px solid gray;
+    }
+    .flag {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding-right: 15px;
+    }
+}
