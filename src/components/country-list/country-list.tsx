@@ -25,7 +25,7 @@ export default class Country extends React.Component {
         return (
         <div id="country">
             {
-                this.state.countryList.map(country => 
+                this.state.countryList.map( (country) => 
                     <div className="country-list"  key={country.name}>
                         <img src={country.flag} alt="" className="flag" />
                         <p>{country.name}</p>

@@ -1,14 +1,22 @@
 #country {
-  width: 945px;
+  max-width: 945px;
   margin: 0 auto; }
 
 .country-list {
   font-family: 'PT Sans', sans-serif;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  padding: 15px 10px; }
+  .country-list:not(:first-of-type) {
+    border-top: 1px solid gray; }
+  .country-list:not(:last-of-type) {
+    border-bottom: 1px solid gray; }
   .country-list .flag {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%; }
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding-right: 15px; }
+
+body {
+  background-color: darkcyan; }
 
