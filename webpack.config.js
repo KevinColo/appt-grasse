@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   entry: './src/index.tsx',
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js', '.css']
   },
   output: {
     path: path.join(__dirname, '/dist'),
@@ -18,8 +18,12 @@ module.exports = {
         loader: 'awesome-typescript-loader'
       },
       {
-        test: /\.sa?css$/,
+        test: /\.s?css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.jpg|png$/,
+        use: 'url-loader'
       }
     ]
   },
